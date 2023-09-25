@@ -1,0 +1,33 @@
+<t>
+    <div class="pc_builder">
+        <div class="pc_builder_header">
+            <h1>Custom PC Builder</h1>
+        </div>
+        <div class="pc_builder_body">
+            <div class="pc_builder_components">
+                <t t-foreach="components" t-as="component">
+                    <div class="component" t-att-data-id="component.id">
+                        <img t-att-src="component.image_url" alt="Component Image"/>
+                        <div class="component_name">
+                            <t t-esc="component.name"/>
+                        </div>
+                        <div class="component_price">
+                            <t t-esc="component.price"/>
+                        </div>
+                    </div>
+                </t>
+            </div>
+            <div class="pc_builder_cart">
+                <h2>Your Custom PC</h2>
+                <div class="pc_builder_cart_items">
+                    <!-- Items will be added here dynamically -->
+                </div>
+                <div class="pc_builder_cart_total">
+                    <h3>Total: </h3>
+                    <span class="total_price">0</span>
+                </div>
+                <button class="checkout_button">Checkout</button>
+            </div>
+        </div>
+    </div>
+</t>
