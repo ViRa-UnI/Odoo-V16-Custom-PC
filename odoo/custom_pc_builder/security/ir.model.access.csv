@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pc_builder,access_pc_builder,model_pc_builder,base.group_user,1,0,0,0
+access_component,access_component,model_component,base.group_user,1,0,0,0
+access_template,access_template,model_template,base.group_user,1,0,0,0
+access_pc_builder_admin,access_pc_builder_admin,model_pc_builder,base.group_system,1,1,1,1
+access_component_admin,access_component_admin,model_component,base.group_system,1,1,1,1
+access_template_admin,access_template_admin,model_template,base.group_system,1,1,1,1

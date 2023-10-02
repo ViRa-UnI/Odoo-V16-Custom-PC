@@ -1,0 +1,53 @@
+```xml
+<odoo>
+    <data>
+        <!-- Template form view -->
+        <record id="view_template_form" model="ir.ui.view">
+            <field name="name">template.form</field>
+            <field name="model">pc.builder.template</field>
+            <field name="arch" type="xml">
+                <form string="Template">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="components" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Template tree view -->
+        <record id="view_template_tree" model="ir.ui.view">
+            <field name="name">template.tree</field>
+            <field name="model">pc.builder.template</field>
+            <field name="arch" type="xml">
+                <tree string="Template">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Template action -->
+        <record id="action_template" model="ir.actions.act_window">
+            <field name="name">Templates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pc.builder.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Template
+                </p>
+                <p>
+                    Here you can create and manage your PC build templates.
+                </p>
+            </field>
+        </record>
+
+        <!-- Template menu item -->
+        <menuitem id="menu_template" name="Templates" parent="custom_pc_builder.menu_pc_builder" action="custom_pc_builder.action_template"/>
+    </data>
+</odoo>
+```

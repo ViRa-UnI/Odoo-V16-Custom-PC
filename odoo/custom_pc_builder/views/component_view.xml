@@ -1,0 +1,49 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Component Form View -->
+        <record id="view_component_form" model="ir.ui.view">
+            <field name="name">component.form</field>
+            <field name="model">custom.pc.builder.component</field>
+            <field name="arch" type="xml">
+                <form string="Component">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="component_type"/>
+                            <field name="price"/>
+                            <field name="stock"/>
+                            <field name="compatible_with"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Component Tree View -->
+        <record id="view_component_tree" model="ir.ui.view">
+            <field name="name">component.tree</field>
+            <field name="model">custom.pc.builder.component</field>
+            <field name="arch" type="xml">
+                <tree string="Component">
+                    <field name="name"/>
+                    <field name="component_type"/>
+                    <field name="price"/>
+                    <field name="stock"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Component Action -->
+        <record id="action_component" model="ir.actions.act_window">
+            <field name="name">Components</field>
+            <field name="res_model">custom.pc.builder.component</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Component Menu -->
+        <menuitem id="menu_component" name="Components" parent="custom_pc_builder.menu_custom_pc_builder" action="custom_pc_builder.action_component"/>
+    </data>
+</odoo>
+```
